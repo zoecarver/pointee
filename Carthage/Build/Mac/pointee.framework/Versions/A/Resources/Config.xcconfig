@@ -1,0 +1,10 @@
+//
+//  Config.xcconfig
+//  pointee
+//
+//  Created by Zoe IAMZOE.io on 8/21/18.
+//  Copyright © 2018 Zoe IAMZOE.io. All rights reserved.
+//
+
+SWIFT_INCLUDE_PATHS = $(SRCROOT)/
+MODULEMAP_PRIVATE_FILE = $(SRCROOT)/module.modulemap

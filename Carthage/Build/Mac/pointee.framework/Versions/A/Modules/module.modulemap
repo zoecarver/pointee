@@ -1,0 +1,11 @@
+framework module pointee {
+  umbrella header "pointee.h"
+
+  export *
+  module * { export * }
+}
+
+module pointee.Swift {
+    header "pointee-Swift.h"
+    requires objc
+}
