@@ -8,16 +8,57 @@
 
 /* Begin PBXBuildFile section */
 		C8681220212C85D900DC7AC5 /* pointee.h in Headers */ = {isa = PBXBuildFile; fileRef = C868121E212C85D900DC7AC5 /* pointee.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C8681227212C85F000DC7AC5 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8681226212C85F000DC7AC5 /* Main.swift */; };
+		C868122F212C8D5800DC7AC5 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C868122E212C8D5800DC7AC5 /* main.swift */; };
+		C868123A212C8EFB00DC7AC5 /* pointee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C868121B212C85D900DC7AC5 /* pointee.framework */; };
+		C8AD2DEE212D2D5F006CCC9B /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = C8AD2DEC212D2D12006CCC9B /* Config.xcconfig */; };
+		C8AD2DFA212E39C7006CCC9B /* pointee_ios.h in Headers */ = {isa = PBXBuildFile; fileRef = C8AD2DF8212E39C7006CCC9B /* pointee_ios.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C8AD2DFE212E39CF006CCC9B /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8681226212C85F000DC7AC5 /* Main.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C868122A212C8D5800DC7AC5 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = usr/share/man/man1;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C868121B212C85D900DC7AC5 /* pointee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = pointee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C868121E212C85D900DC7AC5 /* pointee.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pointee.h; sourceTree = "<group>"; };
 		C868121F212C85D900DC7AC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8681226212C85F000DC7AC5 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		C868122C212C8D5800DC7AC5 /* pointee-test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "pointee-test"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C868122E212C8D5800DC7AC5 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		C8AD2DEC212D2D12006CCC9B /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		C8AD2DED212D2D2F006CCC9B /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		C8AD2DF6212E39C7006CCC9B /* pointee_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = pointee_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8AD2DF8212E39C7006CCC9B /* pointee_ios.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pointee_ios.h; sourceTree = "<group>"; };
+		C8AD2DF9212E39C7006CCC9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		C8681217212C85D900DC7AC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8681229212C8D5800DC7AC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C868123A212C8EFB00DC7AC5 /* pointee.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8AD2DF2212E39C7006CCC9B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -31,7 +72,10 @@
 			isa = PBXGroup;
 			children = (
 				C868121D212C85D900DC7AC5 /* pointee */,
+				C868122D212C8D5800DC7AC5 /* pointee-test */,
+				C8AD2DF7212E39C7006CCC9B /* pointee-ios */,
 				C868121C212C85D900DC7AC5 /* Products */,
+				C8681233212C8D7300DC7AC5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -39,6 +83,8 @@
 			isa = PBXGroup;
 			children = (
 				C868121B212C85D900DC7AC5 /* pointee.framework */,
+				C868122C212C8D5800DC7AC5 /* pointee-test */,
+				C8AD2DF6212E39C7006CCC9B /* pointee_ios.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,8 +94,35 @@
 			children = (
 				C868121E212C85D900DC7AC5 /* pointee.h */,
 				C868121F212C85D900DC7AC5 /* Info.plist */,
+				C8681226212C85F000DC7AC5 /* Main.swift */,
+				C8AD2DEC212D2D12006CCC9B /* Config.xcconfig */,
+				C8AD2DED212D2D2F006CCC9B /* module.modulemap */,
 			);
 			path = pointee;
+			sourceTree = "<group>";
+		};
+		C868122D212C8D5800DC7AC5 /* pointee-test */ = {
+			isa = PBXGroup;
+			children = (
+				C868122E212C8D5800DC7AC5 /* main.swift */,
+			);
+			path = "pointee-test";
+			sourceTree = "<group>";
+		};
+		C8681233212C8D7300DC7AC5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C8AD2DF7212E39C7006CCC9B /* pointee-ios */ = {
+			isa = PBXGroup;
+			children = (
+				C8AD2DF8212E39C7006CCC9B /* pointee_ios.h */,
+				C8AD2DF9212E39C7006CCC9B /* Info.plist */,
+			);
+			path = "pointee-ios";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -60,6 +133,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8681220212C85D900DC7AC5 /* pointee.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8681241212CB37100DC7AC5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8AD2DF3212E39C7006CCC9B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8AD2DFA212E39C7006CCC9B /* pointee_ios.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,16 +172,60 @@
 			productReference = C868121B212C85D900DC7AC5 /* pointee.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		C868122B212C8D5800DC7AC5 /* pointee-test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C8681230212C8D5800DC7AC5 /* Build configuration list for PBXNativeTarget "pointee-test" */;
+			buildPhases = (
+				C8681228212C8D5800DC7AC5 /* Sources */,
+				C8681229212C8D5800DC7AC5 /* Frameworks */,
+				C868122A212C8D5800DC7AC5 /* CopyFiles */,
+				C8681241212CB37100DC7AC5 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "pointee-test";
+			productName = "pointee-test";
+			productReference = C868122C212C8D5800DC7AC5 /* pointee-test */;
+			productType = "com.apple.product-type.tool";
+		};
+		C8AD2DF5212E39C7006CCC9B /* pointee-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C8AD2DFB212E39C7006CCC9B /* Build configuration list for PBXNativeTarget "pointee-ios" */;
+			buildPhases = (
+				C8AD2DF1212E39C7006CCC9B /* Sources */,
+				C8AD2DF2212E39C7006CCC9B /* Frameworks */,
+				C8AD2DF3212E39C7006CCC9B /* Headers */,
+				C8AD2DF4212E39C7006CCC9B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "pointee-ios";
+			productName = "pointee-ios";
+			productReference = C8AD2DF6212E39C7006CCC9B /* pointee_ios.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		C8681212212C85D900DC7AC5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Zoe IAMZOE.io";
 				TargetAttributes = {
 					C868121A212C85D900DC7AC5 = {
+						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 0940;
+					};
+					C868122B212C8D5800DC7AC5 = {
+						CreatedOnToolsVersion = 9.4;
+					};
+					C8AD2DF5212E39C7006CCC9B = {
 						CreatedOnToolsVersion = 9.4;
 					};
 				};
@@ -111,12 +243,22 @@
 			projectRoot = "";
 			targets = (
 				C868121A212C85D900DC7AC5 /* pointee */,
+				C868122B212C8D5800DC7AC5 /* pointee-test */,
+				C8AD2DF5212E39C7006CCC9B /* pointee-ios */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C8681219212C85D900DC7AC5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8AD2DEE212D2D5F006CCC9B /* Config.xcconfig in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8AD2DF4212E39C7006CCC9B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -130,6 +272,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8681227212C85F000DC7AC5 /* Main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8681228212C8D5800DC7AC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C868122F212C8D5800DC7AC5 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8AD2DF1212E39C7006CCC9B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8AD2DFE212E39CF006CCC9B /* Main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +417,8 @@
 		C8681224212C85D900DC7AC5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -266,6 +427,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
+				GCC_INPUT_FILETYPE = automatic;
 				INFOPLIST_FILE = pointee/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -276,6 +438,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.zoecarver.pointee;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "${SRCROOT}/";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -283,6 +447,8 @@
 		C8681225212C85D900DC7AC5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -291,6 +457,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
+				GCC_INPUT_FILETYPE = automatic;
 				INFOPLIST_FILE = pointee/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -301,7 +468,87 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.zoecarver.pointee;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "${SRCROOT}/";
 				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		C8681231212C8D5800DC7AC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/pointee.framework/Versions/Current/Frameworks",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		C8681232212C8D5800DC7AC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/pointee.framework/Versions/Current/Frameworks",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		C8AD2DFC212E39C7006CCC9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "pointee-ios/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zoecarver.pointee-ios";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C8AD2DFD212E39C7006CCC9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "pointee-ios/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zoecarver.pointee-ios";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -322,6 +569,24 @@
 			buildConfigurations = (
 				C8681224212C85D900DC7AC5 /* Debug */,
 				C8681225212C85D900DC7AC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C8681230212C8D5800DC7AC5 /* Build configuration list for PBXNativeTarget "pointee-test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8681231212C8D5800DC7AC5 /* Debug */,
+				C8681232212C8D5800DC7AC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C8AD2DFB212E39C7006CCC9B /* Build configuration list for PBXNativeTarget "pointee-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8AD2DFC212E39C7006CCC9B /* Debug */,
+				C8AD2DFD212E39C7006CCC9B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
