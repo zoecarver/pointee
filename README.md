@@ -89,7 +89,7 @@ ptr |> Double.self
 ```swift
 var int = 1
 var ptr = int&
-print(ptr |> Void.self)
+ptr |> Void.self
 ```
 Whats the difference? Instead of casting to an `UnsafeMutablePointer<Void>` it casts to an `UnsafeMutableRawPointer`.
 #### `|>>` Bitcasting
