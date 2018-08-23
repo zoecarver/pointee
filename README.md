@@ -126,4 +126,7 @@ print(fooClassPtr*) // Foo(bar: 7)
 ## Why
 I created this mostly as a fun project but, it might also make it easier to communicate with C code. 
 ## Install
-Carthage coming soon.
+You can use carthage to install this framework:
+```
+github "pudility/icons8"
+```
