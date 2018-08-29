@@ -128,5 +128,6 @@ I created this mostly as a fun project but, it might also make it easier to comm
 ## Install
 You can use carthage to install this framework:
 ```
-github "pudility/icons8"
+github "pudility/pointee"
 ```
+
